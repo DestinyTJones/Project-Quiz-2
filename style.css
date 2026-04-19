@@ -3,13 +3,13 @@ body {
     margin: 0;
     padding: 0;
 
-    /* Background */
     background: linear-gradient(to right, #4facfe, #00f2fe);
 
-    /* Center everything */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 h1 {
@@ -40,6 +40,9 @@ form {
 
 .question {
     margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 button {
@@ -58,5 +61,7 @@ button:hover {
 
 #result {
     margin-top: 20px;
+    font-weight: bold;
     text-align: center;
+    color: white;
 }
