@@ -13,49 +13,96 @@
     <a href="quiz.html">Quiz</a>
 </nav>
 
-<h1>Self-Assessment Quiz</h1>
+<div class="container">
+    <h1>Self-Assessment Quiz</h1>
 
-<form id="quizForm">
+    <form id="quizForm">
 
-<div class="question">
-<p>1. JavaScript is mainly used for ________.</p>
-<input type="text" id="q1">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. JavaScript is mainly used for ________.</p>
+            <input type="text" id="q1" placeholder="Enter your answer">
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Which is NOT a programming language?</p>
+
+            <label>
+                <input type="radio" name="q2" value="HTML"> HTML
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="Python"> Python
+            </label><br>
+
+            <label>
+                <input type="radio" name="q2" value="Java"> Java
+            </label>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. Which symbol is used for comments in JS?</p>
+
+            <label>
+                <input type="radio" name="q3" value="//"> //
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="html"> HTML comment
+            </label><br>
+
+            <label>
+                <input type="radio" name="q3" value="**"> **
+            </label>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. Which is used to declare variables?</p>
+
+            <label>
+                <input type="radio" name="q4" value="let"> let
+            </label><br>
+
+            <label>
+                <input type="radio" name="q4" value="var"> var
+            </label><br>
+
+            <label>
+                <input type="radio" name="q4" value="both"> Both
+            </label>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. Which are JavaScript frameworks?</p>
+
+            <label>
+                <input type="checkbox" name="q5" value="React"> React
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="q5" value="Angular"> Angular
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="q5" value="HTML"> HTML
+            </label>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="button" id="resetBtn">Retake</button>
+        </div>
+
+    </form>
+
+    <div id="result"></div>
 </div>
 
-<div class="question">
-<p>2. Which is NOT a programming language?</p>
-<input type="radio" name="q2" value="HTML"> HTML<br>
-<input type="radio" name="q2" value="Python"> Python<br>
-<input type="radio" name="q2" value="Java"> Java<br>
-</div>
-
-<div class="question">
-<p>3. Which symbol is used for comments in JS?</p>
-<input type="radio" name="q3" value="//">//<br>
-<input type="radio" name="q3" value="html"> HTML comment<br>
-<input type="radio" name="q3" value="**"> **<br>
-</div>
-
-<div class="question">
-<p>4. Which is used to declare variables?</p>
-<input type="radio" name="q4" value="let"> let<br>
-<input type="radio" name="q4" value="var"> var<br>
-<input type="radio" name="q4" value="both"> Both<br>
-</div>
-
-<div class="question">
-<p>5. Which are JavaScript frameworks?</p>
-<input type="checkbox" name="q5" value="React"> React<br>
-<input type="checkbox" name="q5" value="Angular"> Angular<br>
-<input type="checkbox" name="q5" value="HTML"> HTML<br>
-</div>
-
-<button type="submit">Submit</button>
-<button type="button" id="resetBtn">Retake</button>
-    
-</form>
-
-<div id="result"></div>
 <script src="quiz.js"></script>
 
 </body>
