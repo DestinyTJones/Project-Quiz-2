@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    function submitQuiz() {
+    const form = document.getElementById("quizForm");
+    const resetBtn = document.getElementById("resetBtn");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
         let score = 0;
         let total = 5;
         let feedback = "";
@@ -61,21 +66,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <h2>Quiz Complete!</h2>
                 <p>You got ${score} out of ${total} correct</p>
                 <p>${total - score} incorrect</p>
-
                 ${feedback}
-
                 <div class="badge ${badgeClass}">${status}</div>
             </div>
         `;
-    }
+    });
 
-    function resetQuiz() {
-        document.getElementById("quizForm").reset();
+    // Reset button
+    resetBtn.addEventListener("click", function () {
+        form.reset();
         document.getElementById("result").innerHTML = "";
-    }
-
-    // ✅ MAKE FUNCTIONS GLOBAL (THIS MUST BE OUTSIDE)
-    window.submitQuiz = submitQuiz;
-    window.resetQuiz = resetQuiz;
+    });
 
 });
