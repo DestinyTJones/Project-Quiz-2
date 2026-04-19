@@ -1,47 +1,63 @@
-document.addEventListener("DOMContentLoaded", function () {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Self-Assessment Quiz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
 
-    const form = document.getElementById("quizForm");
-    const resetBtn = document.getElementById("resetBtn");
+<body>
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+<nav>
+    <a href="index.html">Home</a>
+    <a href="quiz.html">Quiz</a>
+</nav>
 
-        let score = 0;
-        let total = 5;
+<h1>Self-Assessment Quiz</h1>
 
-        // Q1 (text)
-        let q1 = document.getElementById("q1").value.toLowerCase();
-        if (q1.includes("web") || q1.includes("interactive")) score++;
+<form id="quizForm">
 
-        // Q2
-        let q2 = document.querySelector('input[name="q2"]:checked');
-        if (q2 && q2.value === "HTML") score++;
+<div class="question">
+<p>1. JavaScript is mainly used for ________.</p>
+<input type="text" id="q1">
+</div>
 
-        // Q3
-        let q3 = document.querySelector('input[name="q3"]:checked');
-        if (q3 && q3.value === "//") score++;
+<div class="question">
+<p>2. Which is NOT a programming language?</p>
+<input type="radio" name="q2" value="HTML"> HTML<br>
+<input type="radio" name="q2" value="Python"> Python<br>
+<input type="radio" name="q2" value="Java"> Java<br>
+</div>
 
-        // Q4
-        let q4 = document.querySelector('input[name="q4"]:checked');
-        if (q4 && q4.value === "both") score++;
+<div class="question">
+<p>3. Which symbol is used for comments in JS?</p>
+<input type="radio" name="q3" value="//">//<br>
+<input type="radio" name="q3" value="html"> HTML comment<br>
+<input type="radio" name="q3" value="**"> **<br>
+</div>
 
-        // Q5 (checkboxes)
-        let q5 = document.querySelectorAll('input[name="q5"]:checked');
-        let answers = Array.from(q5).map(el => el.value);
+<div class="question">
+<p>4. Which is used to declare variables?</p>
+<input type="radio" name="q4" value="let"> let<br>
+<input type="radio" name="q4" value="var"> var<br>
+<input type="radio" name="q4" value="both"> Both<br>
+</div>
 
-        if (answers.includes("React") && answers.includes("Angular") && !answers.includes("HTML")) {
-            score++;
-        }
+<div class="question">
+<p>5. Which are JavaScript frameworks?</p>
+<input type="checkbox" name="q5" value="React"> React<br>
+<input type="checkbox" name="q5" value="Angular"> Angular<br>
+<input type="checkbox" name="q5" value="HTML"> HTML<br>
+</div>
 
-        // Show result
-        document.getElementById("result").innerHTML =
-            `<h2>You got ${score} out of ${total}</h2>`;
-    });
+<button type="submit">Submit</button>
+<button type="button" id="resetBtn">Retake</button>
+    
+</form>
 
-    // Reset button
-    resetBtn.addEventListener("click", function () {
-        form.reset();
-        document.getElementById("result").innerHTML = "";
-    });
+<div id="result"></div>
 
-});
+<script src="js/quiz.js"></script>
+    
+</body>
+</html>
