@@ -34,11 +34,16 @@ function submitQuiz() {
         score++;
     }
 
+    // PASS / FAIL LOGIC
+    let status = score >= 3 ? "PASS 🎉" : "FAIL ❌";
+    let badgeClass = score >= 3 ? "pass" : "fail";
+
     // RESULT DISPLAY
     document.getElementById("result").innerHTML = `
         <h2>Quiz Complete!</h2>
         <p>You got ${score} out of ${total} correct</p>
         <p>${total - score} incorrect</p>
+        <div class="badge ${badgeClass}">${status}</div>
     `;
 }
 
