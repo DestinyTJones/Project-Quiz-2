@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let status = score >= 3 ? "PASS 🎉" : "FAIL ❌";
         let badgeClass = score >= 3 ? "pass" : "fail";
 
+        // DISPLAY RESULT
         document.getElementById("result").innerHTML = `
             <div style="background:white; padding:20px; border-radius:10px; color:black;">
                 <h2>Quiz Complete!</h2>
@@ -72,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     });
 
-    // Reset button
+    // Retake button
     resetBtn.addEventListener("click", function () {
         form.reset();
         document.getElementById("result").innerHTML = "";
