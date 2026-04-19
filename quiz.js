@@ -57,20 +57,25 @@ document.addEventListener("DOMContentLoaded", function () {
         let badgeClass = score >= 3 ? "pass" : "fail";
 
         document.getElementById("result").innerHTML = `
-            <h2>Quiz Complete!</h2>
-            <p>You got ${score} out of ${total} correct</p>
-            <p>${total - score} incorrect</p>
-            <div>${feedback}</div>
-            <div class="badge ${badgeClass}">${status}</div>
+            <div style="background:white; padding:20px; border-radius:10px; color:black;">
+                <h2>Quiz Complete!</h2>
+                <p>You got ${score} out of ${total} correct</p>
+                <p>${total - score} incorrect</p>
+
+                ${feedback}
+
+                <div class="badge ${badgeClass}">${status}</div>
+            </div>
         `;
     }
 
-    // MAKE FUNCTIONS GLOBAL
-    window.submitQuiz = submitQuiz;
-
-    window.resetQuiz = function () {
+    function resetQuiz() {
         document.getElementById("quizForm").reset();
         document.getElementById("result").innerHTML = "";
-    };
+    }
+
+    // ✅ MAKE FUNCTIONS GLOBAL (THIS MUST BE OUTSIDE)
+    window.submitQuiz = submitQuiz;
+    window.resetQuiz = resetQuiz;
 
 });
