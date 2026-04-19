@@ -56,9 +56,23 @@ document.addEventListener("DOMContentLoaded", function () {
             feedback = "Keep practicing 💪";
         }
 
+        // Pass / Fail badge
+        let badge = "";
+        if (score >= 3) {
+            badge = `<div class="badge pass">PASS 🎉</div>`;
+        } else {
+            badge = `<div class="badge fail">FAIL ❌</div>`;
+        }
+
+        // Percentage
+        let percentage = (score / total * 100).toFixed(0);
+
         // Display result
         document.getElementById("result").innerHTML =
-            `<h2>You got ${score} out of ${total}</h2><p>${feedback}</p>`;
+            `<h2>You got ${score} out of ${total}</h2>
+             <p>${feedback}</p>
+             <p>Score: ${percentage}%</p>
+             ${badge}`;
     });
 
     // Reset button
