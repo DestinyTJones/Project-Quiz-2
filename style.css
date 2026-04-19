@@ -1,23 +1,27 @@
+/* General page styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Set font */
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    text-align: center;
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradient background */
+    text-align: center; /* Center text */
 }
 
+/* Main heading style */
 h1 {
     color: white;
     margin-top: 20px;
 }
 
 /* 🔹 NAVBAR */
+/* Navigation bar container */
 nav {
     width: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
     padding: 15px 0;
 }
 
+/* Navigation links */
 nav a {
     margin: 0 15px;
     color: white;
@@ -26,27 +30,31 @@ nav a {
     font-size: 18px;
 }
 
+/* Hover effect for nav links */
 nav a:hover {
     text-decoration: underline;
 }
 
 /* 🔹 HOMEPAGE CARD */
+/* Container for homepage content */
 .home-container {
     background: white;
     padding: 30px;
     border-radius: 12px;
     width: 60%;
     max-width: 600px;
-    margin: 80px auto;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    margin: 80px auto; /* Center horizontally */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2); /* Soft shadow */
 }
 
+/* Homepage paragraph text */
 .home-container p {
     margin: 15px 0;
     font-size: 18px;
 }
 
 /* 🔹 START BUTTON */
+/* Button that links to quiz */
 .start-btn {
     display: inline-block;
     margin-top: 15px;
@@ -56,15 +64,17 @@ nav a:hover {
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.3s; /* Smooth hover animation */
 }
 
+/* Button hover effect */
 .start-btn:hover {
     background-color: #0077cc;
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight zoom */
 }
 
 /* 🔹 QUIZ FORM */
+/* Quiz form container */
 form {
     background: white;
     padding: 20px;
@@ -73,9 +83,10 @@ form {
     max-width: 600px;
     margin: 40px auto;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-    text-align: left;
+    text-align: left; /* Align questions properly */
 }
 
+/* Each question box */
 .question {
     margin-bottom: 20px;
     padding: 10px;
@@ -84,6 +95,7 @@ form {
 }
 
 /* 🔹 INPUT FIELD */
+/* Style for text input */
 input[type="text"] {
     width: 100%;
     padding: 8px;
@@ -93,6 +105,7 @@ input[type="text"] {
 }
 
 /* 🔹 BUTTONS */
+/* Submit and reset buttons */
 button {
     padding: 10px 15px;
     margin-right: 10px;
@@ -104,12 +117,14 @@ button {
     transition: 0.3s;
 }
 
+/* Button hover effect */
 button:hover {
     background-color: #0077cc;
     transform: scale(1.05);
 }
 
 /* 🔹 RESULT TEXT */
+/* Area where results are displayed */
 #result {
     margin-top: 20px;
     font-weight: bold;
@@ -119,6 +134,7 @@ button:hover {
 }
 
 /* 🔥 PASS/FAIL BADGE */
+/* Badge container */
 .badge {
     margin-top: 15px;
     padding: 12px 20px;
@@ -126,7 +142,7 @@ button:hover {
     font-weight: bold;
     border-radius: 25px;
     display: inline-block;
-    animation: pop 0.4s ease;
+    animation: pop 0.4s ease; /* Pop animation */
 }
 
 /* PASS = green */
@@ -141,7 +157,7 @@ button:hover {
     color: white;
 }
 
-/* ✨ animation */
+/* ✨ Animation for badge */
 @keyframes pop {
     0% {
         transform: scale(0.5);
