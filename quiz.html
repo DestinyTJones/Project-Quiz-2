@@ -3,28 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <title>Self-Assessment Quiz</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
 </head>
 
 <body>
 
+<!-- Navigation bar -->
 <nav>
     <a href="index.html">Home</a>
     <a href="quiz.html">Quiz</a>
 </nav>
 
+<!-- Main container for quiz -->
 <div class="container">
     <h1>Self-Assessment Quiz</h1>
 
+    <!-- Quiz form -->
     <form id="quizForm">
 
-        <!-- Question 1 -->
+        <!-- Question 1: Text input -->
         <div class="question">
             <p>1. JavaScript is mainly used for ________.</p>
             <input type="text" id="q1" placeholder="Enter your answer">
         </div>
 
-        <!-- Question 2 -->
+        <!-- Question 2: Multiple choice (radio buttons) -->
         <div class="question">
             <p>2. Which is NOT a programming language?</p>
 
@@ -41,7 +44,7 @@
             </label>
         </div>
 
-        <!-- Question 3 -->
+        <!-- Question 3: Multiple choice -->
         <div class="question">
             <p>3. Which symbol is used for comments in JS?</p>
 
@@ -58,7 +61,7 @@
             </label>
         </div>
 
-        <!-- Question 4 -->
+        <!-- Question 4: Multiple choice -->
         <div class="question">
             <p>4. Which is used to declare variables?</p>
 
@@ -75,7 +78,7 @@
             </label>
         </div>
 
-        <!-- Question 5 -->
+        <!-- Question 5: Checkbox (multiple answers allowed) -->
         <div class="question">
             <p>5. Which are JavaScript frameworks?</p>
 
@@ -92,7 +95,7 @@
             </label>
         </div>
 
-        <!-- Buttons -->
+        <!-- Submit and reset buttons -->
         <div class="buttons">
             <button type="submit">Submit</button>
             <button type="button" id="resetBtn">Retake</button>
@@ -100,9 +103,11 @@
 
     </form>
 
+    <!-- Area where results will be displayed -->
     <div id="result"></div>
 </div>
 
+<!-- Link to JavaScript file -->
 <script src="quiz.js"></script>
 
 </body>
